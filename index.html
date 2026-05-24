@@ -3,165 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gen-Mu - Smart Fikih untuk GenMu</title>
+    <link rel="icon" href="https://i.ibb.co.com/nNKJsj7g/LOGO-GENMU.jpg" type="image/jpeg">
+    <title>Gen-Mu - Aplikasi Pembelajaran Fikih Interaktif</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">Gen-Mu</a>
-            <button class="menu-toggle" id="mobile-menu">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="https://i.ibb.co.com/nNKJsj7g/LOGO-GENMU.jpg" alt="Logo Gen-Mu" class="nav-logo">
+                <span>GEN-MU</span>
+            </a>
+            
+            <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#hero">Beranda</a></li>
-                <li><a href="#masalah">Masalah</a></li>
-                <li><a href="#solusi">Solusi</a></li>
-                <li><a href="#fitur">Fitur</a></li>
-                <li><a href="#akses">Akses</a></li>
-                <li><a href="#tim">Tim</a></li>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#beranda" class="nav-links">Beranda</a></li>
+                <li><a href="#masalah-solusi" class="nav-links">Solusi Kami</a></li>
+                <li><a href="#fitur" class="nav-links">Fitur</a></li>
+                <li><a href="#tim" class="nav-links">Tim An-Naba</a></li>
+                <li><a href="#akses-produk" class="btn-nav">Akses Produk</a></li>
             </ul>
         </div>
     </nav>
 
-    <header id="hero" class="hero-section">
-        <div class="container hero-container">
-            <div class="hero-text">
-                <h1>Smart Fikih untuk GenMu</h1>
-                <p>Gen-Mu adalah aplikasi pembelajaran Fikih berbasis Android yang dirancang untuk membantu siswa Madrasah Ibtidaiyah belajar mandiri dengan menyenangkan.</p>
-                <a href="#akses" class="btn-primary">Coba Sekarang</a>
-            </div>
-            <div class="hero-image">
-                <img src="https://ibb.co.com/dJcSQQcn" alt="Gambar Hero Aplikasi Gen-Mu" class="img-responsive">
-            </div>
+    <section id="beranda" class="hero">
+        <div class="hero-content fade-in">
+            <h1>Selamat Datang di <span>GEN-MU</span></h1>
+            <p>Gen-Mu merupakan aplikasi pembelajaran fikih interaktif untuk siswa kelas 3 Madrasah Ibtidaiyah yang berfokus pada materi shalat dan puasa. Belajar mandiri jadi lebih menyenangkan!</p>
+            <a href="belajar.html" class="btn-primary">Mulai Belajar Sekarang</a>
         </div>
-    </header>
+        <div class="hero-image slide-in">
+            <img src="https://i.ibb.co.com/nNKJsj7g/LOGO-GENMU.jpg" alt="Ilustrasi Gen-Mu" class="hero-img-style">
+        </div>
+    </section>
 
-    <section id="masalah" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="section-title">Kurangnya Media Pembelajaran Fikih yang Interaktif di MI</h2>
-            <p class="section-subtitle">Pembelajaran fikih di Madrasah Ibtidaiyah masih didominasi metode konvensional yang kurang menarik bagi siswa.</p>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Media Terbatas</h3>
-                    <p>Media pembelajaran yang digunakan masih terbatas pada buku teks dan ceramah.</p>
-                </div>
-                <div class="card">
-                    <h3>Kurang Interaktif</h3>
-                    <p>Kurangnya media interaktif yang membantu siswa memahami praktik ibadah secara konkret.</p>
-                </div>
-                <div class="card">
-                    <h3>Sulit Mandiri</h3>
-                    <p>Siswa kesulitan mengulang materi dan belajar mandiri di luar kelas.</p>
-                </div>
+    <section id="masalah-solusi" class="masalah-solusi">
+        <div class="about-container fade-in">
+            <h2>Masalah & Solusi</h2>
+            <p><strong>Masalah:</strong> Banyak siswa merasa kesulitan dan cepat bosan saat mempelajari tata cara ibadah (fikih) hanya dengan membaca teks buku konvensional.</p>
+            <p><strong>Solusi Kami:</strong> Gen-Mu mengintegrasikan materi shalat dan puasa dengan video animasi, visual yang menarik, serta mini-game interaktif. Kami membantu siswa Madrasah Ibtidaiyah belajar mandiri dengan cara yang sangat menyenangkan dan mudah dipahami.</p>
+        </div>
+    </section>
+
+    <section id="fitur" class="features">
+        <h2 class="text-center fade-in">Fitur Seru Gen-Mu</h2>
+        <div class="feature-grid">
+            <div class="feature-card fade-in">
+                <div class="icon">📖</div>
+                <h3>Materi Sederhana</h3>
+                <p>Materi shalat dan puasa dikemas dengan gambar dan bahasa yang ramah anak.</p>
             </div>
-            <div class="target-user">
-                <p><strong>Target Pengguna:</strong> Siswa MI (7-12 tahun) dan Guru PAI.</p>
+            <div class="feature-card fade-in">
+                <div class="icon">🎬</div>
+                <h3>Video Animasi</h3>
+                <p>Tonton video pembelajaran seru agar kamu makin cepat paham.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="icon">🎮</div>
+                <h3>Game Edukasi</h3>
+                <p>Bermain sambil belajar dengan teka-teki interaktif yang menyenangkan.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="icon">📝</div>
+                <h3>Quiz Interaktif</h3>
+                <p>Uji kemampuanmu setelah belajar dan jadilah juara di setiap babnya!</p>
             </div>
         </div>
     </section>
 
-    <section id="solusi" class="section-padding">
-        <div class="container grid-2">
-            <div class="solusi-image">
-                <img src="https://ibb.co.com/LX5YMZWj" alt="Tampilan aplikasi Gen-Mu dengan menu Belajar, Game, dan Ibadahku" class="img-responsive rounded">
-            </div>
-            <div class="solusi-text">
-                <h2>Gen-Mu: Aplikasi Pembelajaran Fikih Interaktif</h2>
-                <p>Gen-Mu hadir sebagai solusi digital untuk memahami materi fikih seperti thaharah, sholat, hingga muamalah secara fleksibel.</p>
-                <ul class="list-check">
-                    <li>Membantu memahami materi dengan lebih mudah.</li>
-                    <li>Meningkatkan motivasi dengan sistem poin/game.</li>
-                    <li>Belajar kapan saja dan di mana saja.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="fitur" class="section-padding bg-accent">
-        <div class="container">
-            <h2 class="section-title">Fitur Utama Gen-Mu</h2>
-            <p class="section-subtitle">Menyediakan fitur pembelajaran yang sesuai dengan kurikulum Kemenag RI.</p>
-            <div class="grid-4">
-                <div class="feature-card">
-                    <div class="icon">📖</div>
-                    <h3>Belajar</h3>
-                    <p>Materi lengkap dalam bentuk ringkasan, video, dan audio.</p>
+    <section id="tim" class="team-section">
+        <div class="team-container fade-in">
+            <h2 class="team-title">Tim An-Naba</h2>
+            <p class="team-desc">An-Naba merupakan tim pengembang aplikasi edukasi yang berfokus pada inovasi pembelajaran Pendidikan Agama Islam berbasis digital. Tim ini berkomitmen menghadirkan solusi pembelajaran yang interaktif, menarik, dan sesuai dengan karakteristik siswa Madrasah Ibtidaiyah melalui pengembangan aplikasi Gen-Mu yang mengintegrasikan materi fikih, game edukasi, dan pembiasaan ibadah.</p>
+            
+            <div class="team-grid">
+                <div class="team-card fade-in">
+                    <img src="https://i.ibb.co.com/bgSdx4kd/Gambar-Whats-App-2025-11-27-pukul-20-53-47-1bafa72e-1.jpg" alt="Photo Profil Talitha" class="team-photo">
+                    <h3>Talitha Luthfiana Fikry</h3>
+                    <p>Koordinator Pengembangan</p>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">🎮</div>
-                    <h3>Game Edukasi</h3>
-                    <p>Kuis interaktif untuk menguji pemahaman dengan seru.</p>
+                <div class="team-card fade-in">
+                    <img src="https://i.ibb.co.com/99Jbgrx2/Whats-App-Image-2026-04-27-at-07-52-18.jpg" alt="Photo Profil Zackiy" class="team-photo">
+                    <h3>Ahmad Zackiy</h3>
+                    <p>Desainer Tampilan (UI/UX)</p>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">🕌</div>
-                    <h3>Ibadahku</h3>
-                    <p>Pengingat doa harian dan pembiasaan amalan harian.</p>
+                <div class="team-card fade-in">
+                    <img src="https://i.ibb.co.com/6R9L8zCX/Whats-App-Image-2026-04-27-at-07-54-19.jpg" alt="Photo Profil Agil" class="team-photo">
+                    <h3>Agil Salsa Nabila</h3>
+                    <p>Perancang Game Edukasi</p>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">🏆</div>
-                    <h3>Progres & Reward</h3>
-                    <p>Pantau perkembangan belajar dan kumpulkan badge.</p>
+                <div class="team-card fade-in">
+                    <img src="https://i.ibb.co.com/KxWQjw3b/Whats-App-Image-2026-04-20-at-08-06-09.jpg" alt="Photo Profil Fatsa" class="team-photo">
+                    <h3>Fathun Nissa’</h3>
+                    <p>Penyusun Konten Materi</p>
+                </div>
+                <div class="team-card fade-in">
+                    <img src="https://i.ibb.co.com/0yjbb5KD/Whats-App-Image-2026-04-20-at-08-09-34-1.jpg" alt="Photo Profil Adhi Faiz" class="team-photo">
+                    <h3>Adhi Faiz Fadillah</h3>
+                    <p>Perancang Konsep Aplikasi</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="akses" class="section-padding">
-        <div class="container text-center">
-            <div class="cta-box">
-                <h2>Akses Aplikasi Gen-Mu</h2>
-                <p>Mulai pengalaman belajar Fikih yang lebih modern sekarang juga.</p>
-                <div class="btn-group">
-                    <a href="belajar.html" class="btn-primary">Buka Halaman Pembelajaran</a>
-                    <a href="#" class="btn-secondary">Unduh Aplikasi (APK)</a>
-                </div>
-            </div>
+    <section id="akses-produk" class="akses-produk">
+        <div class="akses-container fade-in">
+            <h2>Ayo Mulai Petualangan Belajarmu!</h2>
+            <p>Sudah siap menjadi generasi hebat yang rajin beribadah? Masuk ke Ruang Belajar Gen-Mu sekarang juga.</p>
+            <a href="belajar.html" class="btn-accent">Akses Ruang Belajar</a>
         </div>
     </section>
 
-    <section id="tim" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="section-title">Tim An-Naba</h2>
-            <p class="section-subtitle">Berkomitmen menghadirkan inovasi PAI berbasis digital.</p>
-            <div class="grid-5">
-                <div class="team-card">
-                    <img src="https://ibb.co.com/hR7f5gM5" alt="Photo Profil Talitha" class="team-img">
-                    <h4>Talitha Luthfiana Fikry</h4>
-                    <p>Koordinator</p>
-                </div>
-                <div class="team-card">
-                    <img src="https://ibb.co.com/nq0bkFG7" alt="Photo Profil Zackiy" class="team-img">
-                    <h4>Ahmad Zackiy</h4>
-                    <p>UI/UX Designer</p>
-                </div>
-                <div class="team-card">
-                    <img src="https://ibb.co.com/TB52mW1P" alt="Photo Profil Agil" class="team-img">
-                    <h4>Agil Salsa Nabila</h4>
-                    <p>Game Designer</p>
-                </div>
-                <div class="team-card">
-                    <img src="https://ibb.co.com/DPBPsTBG" alt="Photo Profil Fatsa" class="team-img">
-                    <h4>Fathun Nissa’</h4>
-                    <p>Konten Materi</p>
-                </div>
-                <div class="team-card">
-                    <img src="https://ibb.co.com/j9TnJdvQ" alt="photo profil Adhi Faiz" class="team-img">
-                    <h4>Adhi Faiz Fadillah</h4>
-                    <p>Konsep Aplikasi</p>
-                </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://i.ibb.co.com/nNKJsj7g/LOGO-GENMU.jpg" alt="Logo Gen-Mu">
+                <h3>GEN-MU</h3>
             </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p><strong>Kelompok An-naba</strong></p>
-            <p>Kelas A, Pendidikan Agama Islam</p>
-            <p>&copy; 2024 Gen-Mu Application Project.</p>
+            <p><strong>Tim An-Naba</strong></p>
+            <p>Kelas A, Pendidikan Agama Islam<br>Universitas Muhammadiyah Yogyakarta</p>
+            <p style="margin-top: 15px; font-size: 0.85rem;">&copy; 2026 GEN-MU. All Rights Reserved.</p>
         </div>
     </footer>
 
