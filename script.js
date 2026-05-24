@@ -1,53 +1,51 @@
-// Navigasi Mobile (Hamburger Menu)
-const menuToggle = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+// Hamburger Menu Toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navMenu = document.getElementById('nav-menu');
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    // Animasi tombol hamburger sederhana
-    menuToggle.classList.toggle('is-active');
+mobileMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    mobileMenu.classList.toggle('is-active');
 });
 
-// Tutup menu saat link diklik (untuk mobile)
-document.querySelectorAll('.nav-links a').forEach(link => {
+// Tutup menu otomatis setelah klik (Mobile)
+const navLinks = document.querySelectorAll('.nav-links');
+navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+        navMenu.classList.remove('active');
     });
 });
 
-// Penanganan Gambar Gagal Dimuat
-document.querySelectorAll('img').forEach(img => {
-    img.onerror = function() {
-        this.style.display = 'none'; // Sembunyikan gambar asli
-        const fallback = document.createElement('div');
-        fallback.className = 'img-fallback';
-        fallback.innerHTML = '<span>Gambar belum ditambahkan</span>';
-        fallback.style.background = '#ddd';
-        fallback.style.height = '200px';
-        fallback.style.display = 'flex';
-        fallback.style.alignItems = 'center';
-        fallback.style.justifyContent = 'center';
-        fallback.style.borderRadius = '10px';
-        this.parentNode.insertBefore(fallback, this);
-    };
-});
-
-// Efek Muncul Saat Scroll (Scroll Reveal Sederhana)
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(sec => {
-        const top = window.scrollY;
-        const offset = sec.offsetTop - 400;
-        if (top >= offset) {
-            sec.style.opacity = '1';
-            sec.style.transform = 'translateY(0)';
+// Smooth Scrolling Navigasi Internal
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 70, // Offset untuk tinggi navbar
+                behavior: 'smooth'
+            });
         }
     });
 });
 
-// Atur gaya awal untuk animasi scroll
-document.querySelectorAll('section').forEach(sec => {
-    sec.style.opacity = '0';
-    sec.style.transform = 'translateY(20px)';
-    sec.style.transition = 'all 0.8s ease-out';
-});
+// Animasi Scroll (Intersection Observer)
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.15 
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); 
+        }
+    });
+}, observerOptions);
+
+const animatedElements = document.querySelectorAll('.fade-in, .slide-in');
+animatedElements.forEach(el => observer.observe(el));
